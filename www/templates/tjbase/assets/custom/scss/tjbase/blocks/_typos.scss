@@ -1,0 +1,74 @@
+h1 {
+	font-size: 30px;
+	line-height: 34px;
+	font-weight: $font-weight-semibold;
+}
+h2 {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: $font-weight-semibold;
+}
+h3 {
+	font-size: 20px;
+	line-height: 26px;
+	font-weight: $font-weight-semibold;
+}
+h4 {
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: $font-weight-semibold;
+}
+@include respond-above(sm) {
+	h1 {
+		font-size: 36px;
+		line-height: 38px;
+	}
+	h2 {
+		font-size: 24px;
+		line-height: 30px;
+	}
+	h3 {
+		font-size: 24px;
+		line-height: 28px;
+	}
+	h4 {
+		font-size: 22px;
+		line-height: 26px;
+	}
+}
+@include respond-above(md) {
+	h1 {
+		font-size: 42px;
+		line-height: 44px;
+	}
+	h2 {
+		font-size: 30px;
+		line-height: 32px;
+	}
+	h3 {
+		font-size: 28px;
+		line-height: 32px;
+	}
+	h4 {
+		font-size: 22px;
+		line-height: 26px;
+	}
+}
+@include respond-above(lg) {
+	h1 {
+		font-size: 48px;
+		line-height: 48px;
+	}
+	h2 {
+		font-size: 36px;
+		line-height: 38px;
+	}
+	h3 {
+		font-size: 30px;
+		line-height: 34px;
+	}
+	h4 {
+		font-size: 24px;
+		line-height: 28px;
+	}
+}

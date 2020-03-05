@@ -1,0 +1,28 @@
+.usecases {
+	h3.sppb-addon-title a {
+		color: #333;
+		font-size: 22px;
+	}
+	.sppb-addon-text {
+		font-size: 18px;
+
+		a {
+			font-size: 16px;
+		}
+	}
+}
+@include respond-above(md) {
+	.usecases {
+		h3.sppb-addon-title a {
+			color: #333;
+			font-size: 28px;
+		}
+		.sppb-addon-text {
+			font-size: 22px;
+
+			a {
+				font-size: 18px;
+			}
+		}
+	}
+}
