@@ -1,0 +1,35 @@
+/*======================================
+ * Alerts
+ * =====================================*/
+#system-message-container{
+	margin-bottom:10px;
+}
+div#system-message-container:empty{
+	display:none;
+}
+@mixin alerts($color, $bg, $border-color){
+	color:$color;
+	background: $bg;
+	border:1px solid $border-color;
+}
+.alert.alert-message{
+	@include alerts(#3c763d, #dff0d8, #d6e9c6);
+}
+.alert.alert-success{
+	@include alerts(#3c763d, #dff0d8, #d6e9c6);
+}
+.alert.alert-info{
+	@include alerts(#31708f, #dff0d8, #d6e9c6);
+}
+.alert.alert-warning{
+	@include alerts(#8a6d3b, #fcf8e3, #faebcc);
+}
+.alert.alert-error{
+	@include alerts(#a94442, #f2dede, #ebccd1);
+}
+.alert.alert-danger{
+	@include alerts(#a94442, #f2dede, #ebccd1);
+}
+.alert.alert-notice{
+	@include alerts(#dff0d8, #d6e9c6, #3c763d);
+}

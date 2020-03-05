@@ -1,0 +1,145 @@
+header {  
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 9;
+    
+    &:before {
+        content: '';
+        padding: 3px;
+        width: 100%;
+        position: absolute;
+        background: rgba(24,134,182,1);
+        background: linear-gradient(90deg, rgba(81,183,149,1) 0%, rgba(24,134,182,1) 100%);
+        transition: top 2s;
+        top: 0;
+    }
+
+    .primary-logo-img {
+        padding: 25px 0;
+
+        a::after {
+            content: none; 
+        }
+    }
+
+    .tjbase-menu {
+        padding: 20px 0;
+
+        .nav-pills {
+            >li {
+                border-bottom: 1px solid #d4d4d4;
+                >a {
+                    @include menu-style;
+                    margin: 0;
+                    padding: 10px 20px;
+                }
+                &.active {
+                    >a {
+                        font-weight: $font-weight-semibold;
+                    }
+                }
+            }
+        }
+        .mobile-menu {
+            position: relative;
+            margin: 10px 0;
+
+            span {
+                right:15px;
+                left: auto;
+                background-color:#333;
+
+                &:first-child {
+                    top: 10px;
+                }
+                &:last-child {
+                    top: 20px;
+                }
+            }
+            &.icon--active {
+                span {
+                    top: 15px;
+                }
+            }
+        }
+        .hamburger-toggle-block.closed {
+            right: -100%;
+        }
+        .hamburger-toggle-block {
+            top:90px;
+            background: #fff;
+            border-top: 1px solid #dcdcdc;
+            width: 100%;
+            .dropdown-menu>li>a {
+                color: #333;
+            }
+        }
+    }
+    .dropdown-toggle {
+        .caret {
+            margin-left: 5px;
+            border: 0;
+            vertical-align: top;
+            font-style: $font-weight-light;
+            padding: 25px 0;
+            &:after {
+                content: "\f107";
+                font-family: "FontAwesome";
+            }
+        }
+    }
+    .hamburger-toggle-block {
+        .nav-pills>li.deeper.dropdown.parent {
+            display: inline-block !important;
+            width: 100%;
+
+            &.open .dropdown-menu {
+                display: block;
+                position: static;
+            }
+        }
+    }
+}
+header.header-fix {
+    &:before {
+        top: 87px;
+    }
+}
+@include respond-above(md) {
+    header {
+        .tjbase-menu .nav-pills>li {
+            border-bottom: none;
+            >a {
+                margin: 20px 15px;
+                padding: 0;
+                
+                &:after {
+                    border-color: #333;
+                    content: "";
+                    position: absolute;
+                    right: 100%;
+                    bottom: -5px;
+                    left: 0;
+                    transition: right .4s;
+                    -webkit-transition: right .4s;
+                    -moz-transition: right .4s;
+                    -o-transition: right .4s;
+                    border-top-width: 2px;
+                    border-top-style: solid;
+                }
+    
+                &:hover {
+                    color: #333;
+    
+                    &:after {
+                        right: 0;
+                    }
+                }
+            }
+            .dropdown-menu {
+                margin-top: -15px !important;
+            }
+        }
+    }
+}

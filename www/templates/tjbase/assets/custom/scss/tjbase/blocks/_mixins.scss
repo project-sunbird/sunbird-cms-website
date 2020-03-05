@@ -1,0 +1,104 @@
+/*==========================
+		MEDIA QUERIES
+===========================*/
+$breakpoints: (
+	xs: 600px,
+	sm: 768px,
+	md: 992px,
+	lg: 1280px,
+	xl: 1440px,
+	xxl: 1600px,
+	xxxl: 1920px
+);
+
+/*==========================
+		RESPOND ABOVE
+===========================*/
+// @include respond-above(sm) {}
+@mixin respond-above($breakpoint) {
+
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    // Write the media query.
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+	padding-top: $top;
+	padding-right: $right;
+	padding-bottom: $bottom;
+	padding-left: $left;
+}
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+@mixin reset-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+@mixin font-awesome-style {
+	display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@mixin menu-style {
+	background: transparent;
+	border-radius: 0;
+	font-size: 18px;
+	color: #333;
+	font-weight: $font-weight-light;
+}
+@mixin anchor-style {
+	color: #0091FF;
+	font-weight: $font-weight-medium;
+	position: relative;
+
+
+	&:after {
+		content: "";
+		position: absolute;
+		right: 100%;
+		bottom: -1px;
+		left: 0;
+		transition: right .4s;
+		-webkit-transition: right .4s;
+		-moz-transition: right .4s;
+		-o-transition: right .4s;
+		border-top-width: 2px;
+		border-top-style: solid;
+	}
+	&:hover {
+		text-decoration: none;
+		color: $theme-primary-color;
+		&:after {
+			right: 0;
+		}
+	}
+}
+@mixin text-gradient {
+	background: rgba(24,134,182,1);
+	background: linear-gradient(to right, rgba(81,183,149,1) 0%, rgba(24,134,182,1) 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: $font-weight-semibold;
+	margin-bottom: 0 0 10px 0;
+}

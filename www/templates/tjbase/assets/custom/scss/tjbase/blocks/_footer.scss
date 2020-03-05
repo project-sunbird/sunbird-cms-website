@@ -1,0 +1,139 @@
+/*======================================
+ * 			Scroll to top
+ * =====================================*/
+.scrollToTop{
+	text-align:center;
+	vertical-align:middle;
+	background: #004595;
+	font-weight: bold;
+	color: #fff;
+	position:fixed;
+	bottom:30px;
+	right:30px;
+	display:none;
+	box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+	font-size:30px;
+	height:35px;
+	width:35px;
+	line-height:35px;
+	cursor: pointer;
+	border:1px solid #fff;
+	border-radius:2px;
+}
+
+footer {
+	color: #fff;
+	background: #0996D9;
+	background: linear-gradient(90deg, #0996D9 0%, #0D79AB 100%);
+	font-size: 13px;
+
+	.module-header {
+		h3 {
+			text-transform: uppercase;
+			font-size: 18px;
+			font-weight: $font-weight-semibold;
+			margin: 0 0 10px 0;
+		}
+	}
+	.footer-address {
+		border-bottom: 1px solid #4eb8e8;
+		font-size: 16px;
+    	font-weight: $font-weight-medium;
+	}
+	.helpful-links .module-content {
+		border-bottom: 1px solid #4eb8e8;
+		padding: 0 0 15px 0;
+	}
+	.get-in-touch {
+		a {
+			@include anchor-style;
+			color: #fff;
+			font-size: 24px;
+			font-weight: $font-weight-medium;
+			display: inline-block;
+			position: relative;
+			border-color: #fff;
+
+			&:hover {
+				color: #fff;
+			}
+
+		}
+	} 
+	.nav>li{
+		width: 100%;
+		display: inline-block;
+
+		>a {
+			color:#fff;
+			float: left;
+			margin: 0;
+			padding: 0;
+			font-size: 16px;
+			font-weight: $font-weight-medium;
+	
+			&:after {
+				border-color: #fff;
+				content: "";
+				position: absolute;
+				right: 100%;
+				bottom: -1px;
+				left: 0;
+				transition: right .4s;
+				-webkit-transition: right .4s;
+				-moz-transition: right .4s;
+				-o-transition: right .4s;
+				border-top-width: 2px;
+				border-top-style: solid;
+			}
+	
+			&:hover {
+				color: #fff;
+	
+				&::after {
+					right: 0;
+				}
+			}
+		}
+		&.active {
+			a {
+				font-weight: $font-weight-semibold;
+			}
+		}
+	}
+	.tjbase-copyright {
+		font-size: 16px;
+		.row {
+			margin:0;
+		}
+		.col-xs-12 {
+			padding: 0;
+			border-top: 1px solid #4eb8e8;
+		}
+		.footer-logo {
+			text-align: center;
+		}
+		.copyright-text {
+			margin: 13px 0;
+			text-align: center;
+		}
+	}
+}
+@include respond-above(xs) {
+	
+	footer .helpful-links {
+		border-right: 1px solid #4eb8e8;
+		.module-content {
+			border-bottom: none;
+		}
+	}
+	footer .get-in-touch {
+		padding: 0 30px;
+	}
+	footer .tjbase-copyright .footer-logo {
+		float: left;
+	}
+	footer .tjbase-copyright .copyright-text {
+		float: right;
+	}
+}

@@ -1,0 +1,32 @@
+.partners {
+	.sppb-addon-wrapper {
+		margin: 0 0 20px 0;
+	}
+	.sppb-addon-single-image {
+		.sppb-addon-single-image-container{
+			padding: 40px;
+		}
+		img {
+			max-height: 60px;
+			transition: all 0.4s ease !important;
+			-webkit-transition: all 0.4s ease !important;
+			-moz-transition: all 0.4s ease !important;
+			-o-transition: all 0.4s ease !important;
+
+			&:hover {
+				transform: scale(1.05);
+				-webkit-transform: scale(1.05);
+				-ms-transform: scale(1.05);
+				-moz-transform: scale(1.05);
+				-o-transform: scale(1.05);
+			}
+		}
+	}
+}
+@include respond-above(md) { 
+	.partners {
+		.sppb-addon-wrapper {
+			margin: 0 0 30px 0;
+		}
+	}
+}
