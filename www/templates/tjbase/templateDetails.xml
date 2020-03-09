@@ -452,6 +452,17 @@
 					filter="raw"
 					>
 				</field>
+				<field
+					name="errorAddatHeadBeginning"
+					type="textarea"
+					label="TPL_TJBASE_ERROR_ADD_HEAD_LABEL"
+					description="TPL_TJBASE_ERROR_ADD_HEAD_DESC"
+					rows="10"
+					cols="10"
+					class="backend-textarea"
+					filter="raw"
+					>
+				</field>
 			</fieldset>
 			<fieldset name="TJBASE_ADVANCED">
 				<field

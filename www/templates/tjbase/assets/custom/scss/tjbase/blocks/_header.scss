@@ -28,15 +28,35 @@ header {
 
         .nav-pills {
             >li {
-                border-bottom: 1px solid #d4d4d4;
+                
                 >a {
                     @include menu-style;
                     margin: 0;
                     padding: 10px 20px;
                 }
+                span {
+                    font-size: 18px;
+                    color: #333;
+                    margin: 0;
+                    padding: 10px 20px;
+                    display: inline-block;
+                }
                 &.active {
                     >a {
                         font-weight: $font-weight-semibold;
+                    }
+                }
+                &.dropdown {
+                    span {  
+                        cursor: pointer;                     
+                        &:after {
+                            content: "\f107";
+                            font-family: "FontAwesome";
+                            margin-left: 5px;
+                            vertical-align: top;
+                            margin-top: -2px;
+                            display: inline-block;
+                        }
                     }
                 }
             }
@@ -71,9 +91,6 @@ header {
             background: #fff;
             border-top: 1px solid #dcdcdc;
             width: 100%;
-            .dropdown-menu>li>a {
-                color: #333;
-            }
         }
     }
     .dropdown-toggle {
@@ -82,34 +99,100 @@ header {
             border: 0;
             vertical-align: top;
             font-style: $font-weight-light;
-            padding: 25px 0;
+            margin-top: 0;
+
             &:after {
                 content: "\f107";
-                font-family: "FontAwesome";
+                @include font-awesome-style;
+                font-size: 20px;;
             }
         }
     }
     .hamburger-toggle-block {
         .nav-pills>li.deeper.dropdown.parent {
             display: inline-block !important;
+            padding: 0;
             width: 100%;
 
             &.open .dropdown-menu {
                 display: block;
                 position: static;
+                box-shadow: 1px 1px 18px -5px #2f93ac;
+                margin: 0 10px;
+                width: 90%;
+                padding: 0;
+            }
+        }
+        .dropdown-menu>li {
+            >a {
+                color: #333;
+                border-bottom: 1px solid #dadada;
+                &:hover {
+                    color: #fff;
+                }
+            }
+            &.active {
+                >a {
+                    color: #fff;
+                }
             }
         }
     }
 }
-header.header-fix {
-    &:before {
-        top: 87px;
+.dropdown-menu>li {
+    >a {
+        color: #333;
+        padding: 10px 20px;
+        font-size: 18px;
+    
+        &:hover {
+            background-image: linear-gradient(90deg, #51b795 0%, #1886b6 100%);
+            color: #fff;
+    
+            &:after, &:focus {
+                content: unset;
+            }
+        }
+    }
+    &.active {
+        >a {
+            background-image: linear-gradient(90deg, #51b795 0%, #1886b6 100%);
+            font-weight: $font-weight-semibold;
+            color: #fff;
+        }
+    }
+    &.open.dropdown {
+        >a, span {
+            font-weight: $font-weight-semibold;
+            display: block;
+        }
     }
 }
+
+.nav-pills>li{
+    &.active {
+        >a:hover,
+        >a:focus {
+            color: #333;
+        }
+    }
+    >a:hover,
+    >a:focus {
+        &:after {
+            content: unset;
+        }
+    }
+}
+
 @include respond-above(md) {
     header {
         .tjbase-menu .nav-pills>li {
             border-bottom: none;
+
+            span {
+                margin: 20px 15px;
+                padding: 0;
+            }
             >a {
                 margin: 20px 15px;
                 padding: 0;
@@ -139,6 +222,8 @@ header.header-fix {
             }
             .dropdown-menu {
                 margin-top: -15px !important;
+                box-shadow: 1px 1px 13px -5px #2f93ac;
+                border: none;
             }
         }
     }
