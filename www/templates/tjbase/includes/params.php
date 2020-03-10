@@ -166,6 +166,7 @@ $addAtBodyBeginning          = $params->get('addAtBodyBeginning', '');
 $addAtBodyEnding             = $params->get('addAtBodyEnding', '');
 $removeStylesheets           = $params->get('removeStylesheets', '');
 $removeScripts               = $params->get('removeScripts', '');
+$errorAddatHeadBeginning     = $params->get('errorAddatHeadBeginning', '');
 
 //Layout
 $layoutsDefault              = $params->get('layoutsDefault', '0');

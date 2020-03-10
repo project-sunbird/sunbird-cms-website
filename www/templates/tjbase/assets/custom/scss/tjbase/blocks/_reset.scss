@@ -3,72 +3,84 @@
 	src:url('../fonts/calibre/CalibreThin.otf')  format('truetype');
 	font-weight: 300;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Calibre';
 	src:url('../fonts/calibre/CalibreThinItalic.otf')  format('truetype');
 	font-weight: 300;
 	font-style: italic;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Calibre';
 	src:url('../fonts/calibre/CalibreLight.otf')  format('truetype');
 	font-weight: 400;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Calibre';
 	src:url('../fonts/calibre/CalibreLightItalic.otf')  format('truetype');
 	font-weight: 400;
 	font-style: italic;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Calibre';
 	src:url('../fonts/calibre/CalibreRegular.otf')  format('truetype');
 	font-weight: 500;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Calibre';
 	src:url('../fonts/calibre/CalibreRegularItalic.otf')  format('truetype');
 	font-weight: 500;
 	font-style: italic;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Calibre';
 	src:url('../fonts/calibre/CalibreMedium.otf')  format('truetype');
 	font-weight: 600;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Calibre';
 	src:url('../fonts/calibre/CalibreMediumItalic.otf')  format('truetype');
 	font-weight: 600;
 	font-style: italic;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Calibre';
 	src:url('../fonts/calibre/CalibreSemibold.otf')  format('truetype');
 	font-weight: 700;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Calibre';
 	src:url('../fonts/calibre/CalibreSemiboldItalic.otf')  format('truetype');
 	font-weight: 700;
 	font-style: italic;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Calibre';
 	src:url('../fonts/calibre/CalibreBold.otf')  format('truetype');
 	font-weight: 800;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Calibre';
 	src:url('../fonts/calibre/CalibreBoldItalic.otf')  format('truetype');
 	font-weight: 800;
 	font-style: italic;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Calibre';
@@ -81,10 +93,12 @@
 	src:url('../fonts/calibre/CalibreBlackItalic.otf')  format('truetype');
 	font-weight: 900;
 	font-style: italic;
+	font-display: swap;
 }
 
 html {
 	position:relative;
+	min-height: 100%;
 }
 body {
 	font-family: 'Calibre', sans-serif !important;

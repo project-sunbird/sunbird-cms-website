@@ -7,8 +7,8 @@
 		<div class="container">
 			<div class="primary-logo-img pull-left">
 				<a href="/">
-					<img class="hidden-xs hidden-sm" src="<?php echo $primarylogoDesktop ?>"/>
-					<img class="hidden-md hidden-lg" src="<?php echo $primarylogoMobile ?>"/>
+					<img class="hidden-xs hidden-sm" src="<?php echo $primarylogoDesktop ?>" alt="logo"/>
+					<img class="hidden-md hidden-lg" src="<?php echo $primarylogoMobile ?>" alt="logo"/>
 				</a>
 			</div>
 			<?php if ($this->countModules('header')): ?>
@@ -77,23 +77,30 @@
 
 <!--Error Page-->
 <div class="wrapper">
-	<?php 
-		$modules = JModuleHelper::getModules( 'header' );
-		$attribs['style'] = 'tjbase';
-		if ($modules): ?>
-		<header id="header" class="tjbase-header">
-			<div class="container">
-				<div class="row">
-					<?php
-						foreach ($modules AS $module ) {
-							echo JModuleHelper::renderModule( $module, $attribs );
-						}
-					?>
-				</div>
+	<header id="header" class="tjbase-header">
+		<div class="container">
+			<div class="primary-logo-img pull-left">
+				<a href="/">
+					<img class="hidden-xs hidden-sm" src="<?php echo $primarylogoDesktop ?>" alt="logo"/>
+					<img class="hidden-md hidden-lg" src="<?php echo $primarylogoMobile ?>" alt="logo"/>
+				</a>
 			</div>
-		</header>
-	<?php endif; ?>
+			<?php
+			$headermodules = JModuleHelper::getModules( 'header' );
+			$attribs['style'] = 'tjbase';
+			if ($headermodules): ?>
+				<div id="menu" class="tjbase-menu">
+				<?php
+					foreach ($headermodules AS $module ) {
+						echo JModuleHelper::renderModule( $module, $attribs );
+					}
+				?>
+				</div>
+			<?php endif; ?>
+		</div>
+	</header>
 
+	<div class="blank"></div>
 	
 	<div id="mainbodyblock" class="tjbase-mainbodyblock">
 		<div class="container">
@@ -106,22 +113,42 @@
 			</div>
 		</div>
 	</div>
-	
-	<?php 
-		$modules = JModuleHelper::getModules( 'footer' );
-		$attribs['style'] = 'tjbase';
-		if ($modules): ?>
-		<footer id="copyright" class="tjbase-copyright" role="contentinfo">
-			<div class="container">
-				<div class="row">
-				<?php
-					foreach ($modules AS $module ) {
-						echo JModuleHelper::renderModule( $module, $attribs );
-					}
-					?>
+
+	<footer>
+		<?php
+		$footermodules = JModuleHelper::getModules( 'footer' );
+		$copyrightmodules = JModuleHelper::getModules( 'copyright' );
+		$attribs['style'] = 'tjbase'; ?>
+		<?php if ($footermodules): ?>
+			<div id="footer" class="tjbase-footer" role="contentinfo">
+				<div class="container">
+					<div class="row">
+						<?php
+						foreach ($footermodules AS $module ) {
+							echo JModuleHelper::renderModule( $module, $attribs );
+						}
+						?>
+					</div>
 				</div>
 			</div>
-		</footer>
-	<?php endif; ?>
+		<?php endif; ?>
+
+		<?php if ($copyrightmodules): ?>
+			<div id="copyright" class="tjbase-copyright" role="contentinfo">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<?php
+							foreach ($copyrightmodules AS $module ) {
+								echo JModuleHelper::renderModule( $module, $attribs );
+							}
+							?>
+						<div>
+					</div>
+				</div>
+		</div>
+		<?php endif; ?>
+	</footer>
+</div>
 <?php endif; ?>
 <!--/Error Page-->

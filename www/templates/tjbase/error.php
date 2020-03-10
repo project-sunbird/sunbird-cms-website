@@ -6,12 +6,14 @@
 defined('_JEXEC') or die;
 
 require __DIR__ . '/includes/params.php';
+require_once __DIR__ . '/includes/footer-fixed.php';
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $headLanguage; ?>" dir="<?php echo $headDirection; ?>">
 	<!--Head-->
 	<head>
 		<meta charset="UTF-8">
+		<?php if($errorAddatHeadBeginning): { echo $errorAddatHeadBeginning; } endif; ?>
 		<meta name="robots" content="noindex, nofollow">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,6 +21,7 @@ require __DIR__ . '/includes/params.php';
 		<link rel="shortcut icon" href="<?php echo $favicon; ?>" />
 		<meta name="generator" content="">
 		<base href="<?php echo $siteUrl; ?>/">
+		
 
 		<?php if($csp): ?>
 			<meta http-equiv="Content-Security-Policy" content="<?php echo $csp; ?>">
@@ -37,7 +40,7 @@ require __DIR__ . '/includes/params.php';
 			foreach ($addStylesheetsHeadArray as $addStylesheetFile){
 				if (file_exists($sitePath.$addStylesheetFile)){ ?>
 					<link href="<?php echo $siteUrl.$addStylesheetFile; ?>" rel="stylesheet" />
-					<?php
+					<?php	
 					};
 				};
 			};
@@ -71,12 +74,6 @@ require __DIR__ . '/includes/params.php';
 			require_once __DIR__ .'/layouts/'.$defaultLayout.'.php';
 
 						if ($this->debug) : ?>
-							<blockquote>
-								<span class="label label-inverse"><?php echo $this->error->getCode(); ?></span> <?php echo htmlspecialchars($this->error->getMessage(), ENT_QUOTES, 'UTF-8');?>
-								<?php if ($this->debug) : ?>
-									<br/><?php echo htmlspecialchars($this->error->getFile(), ENT_QUOTES, 'UTF-8');?>:<?php echo $this->error->getLine(); ?>
-								<?php endif; ?>
-							</blockquote>
 							<div>
 								<?php echo $this->renderBacktrace(); ?>
 								<?php // Check if there are more Exceptions and render their data as well ?>
@@ -111,7 +108,7 @@ require __DIR__ . '/includes/params.php';
 				};
 			};
 		?>
-		<?php
+		<?php 
 			if($addJSBodyEnding){
 				$addJSBodyEndingArray = explode(',',$addJSBodyEnding);
 				foreach ($addJSBodyEndingArray as $addScriptsFile){

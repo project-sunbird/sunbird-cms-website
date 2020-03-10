@@ -1,8 +1,5 @@
-jQuery(window).on('scroll',function(e) {
-    var scrolledHeight = jQuery(window).scrollTop();
-    if( scrolledHeight > 10){
-        jQuery('#header').addClass('header-fix');
-    } else {
-        jQuery('#header').removeClass('header-fix');
-    }
+//Footer fixed at the bottom
+jQuery(document).ready(function() {
+    var footerHeight = jQuery('footer').outerHeight();
+	jQuery('body').css('margin-bottom', footerHeight+'px');
 });
