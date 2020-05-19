@@ -1,1 +1,54 @@
-
+//Video Modal popup
+#rl_modals {
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+}
+#rl_modals_wrapper,
+#rl_modals_loaded_content {
+    width: 100% !important;
+    height: 100% !important;
+}
+#rl_modals_content {
+    width: 100% !important;
+    height: 100% !important;
+}
+.video-popup {
+    .sppb-addon-content, .sppb-addon-wrapper {
+        border: 1px solid rgba(151, 151, 151, 0.1);
+        border-radius: 8px;
+        padding: 20px;
+        background-image: linear-gradient(90deg, rgba(0,185,147,0.1) 0%, rgba(0,128,188,0.1) 100%);
+    }
+    h3.sppb-addon-title {
+        font-size: 24px;
+        line-height: 30px;
+        color: #333;
+        font-weight: 500;
+        margin-top: 0;
+    }
+    a:after {
+        content: none;
+    }
+    p {
+        margin: 0;
+    }
+}
+@include respond-above(md) {
+    #rl_modals {
+        width: 700px !important;
+        height: 500px !important;
+    }
+    #rl_modals_wrapper,
+    #rl_modals_loaded_content {
+        width: 700px !important;
+        height: 500px !important;
+    }
+    #rl_modals_content {
+        width: 700px !important;
+        height: 544px !important;
+    }
+}

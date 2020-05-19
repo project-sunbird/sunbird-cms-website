@@ -65,6 +65,31 @@
         font-size: 18px;
     }
 }
+.rl_sliders.accordion {
+    .accordion-heading {
+        a {
+            color: #333;
+
+            &:after {
+                content: none;
+            }
+            &:hover, &:focus {
+                text-decoration: none;
+                color: #333;
+            }
+        }
+    }
+    .accordion-group.active {
+        >.accordion-heading>a.accordion-toggle {
+            color: #333;           
+        }
+    }
+    >.accordion-group>.accordion-heading>a.accordion-toggle:hover {
+        &:hover, &:focus {
+            color: #333;
+        }            
+    }
+}
 @include respond-above(lg) {
     .blog {
         font-size: 24px;

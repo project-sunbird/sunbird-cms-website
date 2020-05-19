@@ -10,13 +10,23 @@ header {
         width: 100%;
         position: absolute;
         background: rgba(24,134,182,1);
-        background: linear-gradient(90deg, rgba(81,183,149,1) 0%, rgba(24,134,182,1) 100%);
+        background: linear-gradient(90deg, #00B993 0%, #0080BC 100%);
         transition: top 2s;
         top: 0;
     }
+    &:after {
+        content: '';
+        padding: 1px;
+        width: 100%;
+        position: absolute;
+        background: #1886b6;
+        background: linear-gradient(90deg, #00B993 0%, #0080BC 100%);
+        transition: top 2s;
+        opacity: 0.3;
+    }
 
     .primary-logo-img {
-        padding: 25px 0;
+        padding: 15px 0 10px 0;
 
         a::after {
             content: none; 
@@ -24,11 +34,15 @@ header {
     }
 
     .tjbase-menu {
-        padding: 20px 0;
+        padding: 0;
 
         .nav-pills {
             >li {
-                
+                &.dropdown.parent {
+                    a:after {
+                        content: none;
+                    }
+                }
                 >a {
                     @include menu-style;
                     margin: 0;
@@ -71,15 +85,15 @@ header {
                 background-color:#333;
 
                 &:first-child {
-                    top: 10px;
+                    top: 22px;
                 }
                 &:last-child {
-                    top: 20px;
+                    top: 32px;
                 }
             }
             &.icon--active {
                 span {
-                    top: 15px;
+                    top: 25px;
                 }
             }
         }
@@ -87,7 +101,7 @@ header {
             right: -100%;
         }
         .hamburger-toggle-block {
-            top:90px;
+            top:68px;
             background: #fff;
             border-top: 1px solid #dcdcdc;
             width: 100%;
@@ -186,6 +200,10 @@ header {
 
 @include respond-above(md) {
     header {
+
+        .primary-logo-img {
+            padding: 20px 0;
+        }
         .tjbase-menu .nav-pills>li {
             border-bottom: none;
 
@@ -194,7 +212,7 @@ header {
                 padding: 0;
             }
             >a {
-                margin: 20px 15px;
+                margin: 36px 15px 30px 15px;
                 padding: 0;
                 
                 &:after {
@@ -221,7 +239,7 @@ header {
                 }
             }
             .dropdown-menu {
-                margin-top: -15px !important;
+                margin-top: 0 !important;
                 box-shadow: 1px 1px 13px -5px #2f93ac;
                 border: none;
             }

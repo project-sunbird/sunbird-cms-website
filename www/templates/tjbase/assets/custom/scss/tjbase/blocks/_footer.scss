@@ -32,16 +32,16 @@ footer {
 			text-transform: uppercase;
 			font-size: 18px;
 			font-weight: $font-weight-semibold;
-			margin: 0 0 10px 0;
+			margin: 0 0 15px 0;
 		}
 	}
 	.footer-address {
-		border-bottom: 1px solid #4eb8e8;
+		border-bottom: 1px solid rgba(255,255,255,0.17);
 		font-size: 16px;
     	font-weight: $font-weight-medium;
 	}
 	.helpful-links .module-content {
-		border-bottom: 1px solid #4eb8e8;
+		border-bottom: 1px solid rgba(255,255,255,0.17);
 		padding: 0 0 15px 0;
 	}
 	.get-in-touch {
@@ -67,10 +67,10 @@ footer {
 		>a {
 			color:#fff;
 			float: left;
-			margin: 0;
+			margin: 0 0 10px 0;
 			padding: 0;
 			font-size: 16px;
-			font-weight: $font-weight-medium;
+			font-weight: $font-weight-regular;
 	
 			&:after {
 				border-color: #fff;
@@ -108,13 +108,13 @@ footer {
 		}
 		.col-xs-12 {
 			padding: 0;
-			border-top: 1px solid #4eb8e8;
+			border-top: 1px solid rgba(255,255,255,0.17);
 		}
 		.footer-logo {
 			text-align: center;
 		}
 		.copyright-text {
-			margin: 13px 0;
+			margin: 7px 0;
 			text-align: center;
 		}
 	}
@@ -122,7 +122,7 @@ footer {
 @include respond-above(xs) {
 	
 	footer .helpful-links {
-		border-right: 1px solid #4eb8e8;
+		border-right: 1px solid rgba(255,255,255,0.17);
 		.module-content {
 			border-bottom: none;
 		}

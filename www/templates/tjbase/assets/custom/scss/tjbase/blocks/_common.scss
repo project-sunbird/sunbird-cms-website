@@ -1,4 +1,9 @@
 .bg-image {
+	position: fixed !important;
+    bottom: 0;
+    left: 0;
+	z-index: 0 !important;
+	
 	.sppb-addon-wrapper {
 		margin:0 !important;
 	}
@@ -13,6 +18,9 @@
 			width: 100%;
 		}
 	}
+}
+.featured-boxes-cover {
+	position: unset !important;
 }
 .sppb-addon-single-image-container {
 	a {

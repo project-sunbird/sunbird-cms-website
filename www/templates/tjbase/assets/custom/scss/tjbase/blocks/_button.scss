@@ -1,3 +1,25 @@
+.btn-primary {
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #0082BB !important;
+    background: linear-gradient(to right, #00B993 0%, #0082BB 100%) !important;
+    padding: 15px 30px;
+    color: #fff;
+    height: 46px;
+    display: inline-block;
+    text-align: center;
+    white-space: pre-line;
+    vertical-align: middle;
+
+    &:after {
+        content: none;
+    }
+    &:hover {
+        background: #0082BB !important;
+        background-image: linear-gradient(to right, #0082BB 0%, #00B993 100%) !important;
+    }
+}
 .sppb-btn-gradient {
     border-radius: 5px;
     background: #0082BB;
