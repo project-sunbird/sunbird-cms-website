@@ -1,6 +1,14 @@
 .partners {
 	.sppb-addon-wrapper {
 		margin: 0 0 30px 0 !important;
+
+		> div {
+			box-shadow: 0px 0px 20px 0px rgba(152, 152, 152, 0.15) !important;
+
+			&:hover {
+				box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.15) !important;
+			}
+		}
 	}
 	.sppb-addon-single-image {
 		.sppb-addon-single-image-container{
@@ -19,19 +27,12 @@
 		img {
 			width: auto;
 			height: auto;
-    		max-height: 130px;
-			transition: all 0.4s ease !important;
-			-webkit-transition: all 0.4s ease !important;
-			-moz-transition: all 0.4s ease !important;
-			-o-transition: all 0.4s ease !important;
-
-			&:hover {
-				transform: scale(1.05);
-				-webkit-transform: scale(1.05);
-				-ms-transform: scale(1.05);
-				-moz-transform: scale(1.05);
-				-o-transform: scale(1.05);
-			}
+			max-width: 80%;
+			max-height: 130px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 	}
 }

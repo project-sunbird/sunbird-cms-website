@@ -106,10 +106,10 @@ body {
 	color: #333;
 }
 .blank {
-	height: 100px;
+	height: 90px;
 }
 .tjbase-mainbody {
-	padding: 0;
+	padding: 20px 0 0 0;
 }
 img {
 	max-width: 100%;
@@ -132,12 +132,12 @@ a {
 
 @include respond-above(md) {
 	.tjbase-mainbody {
-		padding: 70px 0 0 0;
+		padding: 40px 0 0 0;
 	}
 }
 
 @include respond-above(lg) {
 	.tjbase-mainbody {
-		padding: 150px 0 0 0;
+		padding: 80px 0 0 0;
 	}
 }
