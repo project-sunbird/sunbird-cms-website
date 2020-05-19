@@ -7,18 +7,20 @@
 
 <extension version="3.8.0" type="component" method="upgrade">
 	<name>Akeeba</name>
-	<creationDate>2020-02-11</creationDate>
+	<creationDate>2020-04-07</creationDate>
 	<author>Nicholas K. Dionysopoulos</author>
 	<authorEmail>nicholas@dionysopoulos.me</authorEmail>
 	<authorUrl>http://www.akeebabackup.com</authorUrl>
 	<copyright>Copyright (c)2006-2019 Akeeba Ltd / Nicholas K. Dionysopoulos</copyright>
 	<license>GNU GPL v3 or later</license>
-	<version>7.0.2</version>
-	<description>Akeeba Backup Core - Full Joomla! site backup solution, Core Edition.</description>
+	<version>7.1.3</version>
+	<description>Akeeba Backup Pro - Full Joomla! site backup solution, Professional Edition</description>
 
 	<!-- Public front end files -->
 	<files folder="frontend">
+		<folder>Controller</folder>
 		<folder>Dispatcher</folder>
+		<folder>Model</folder>
 		<filename>akeeba.php</filename>
 	</files>
 
@@ -26,7 +28,7 @@
 	<languages folder="language/frontend">
 		<language tag="en-GB">en-GB/en-GB.com_akeeba.ini</language>
 	</languages>
-
+	
 	<!-- Media files -->
 	<media destination="com_akeeba" folder="media">
 		<folder>css</folder>
@@ -42,10 +44,11 @@
 
 		<!-- Back-end files -->
 		<files folder="backend">
+			<folder>AliceChecks</folder>
 			<folder>backup</folder>
 			<folder>BackupEngine</folder>
-			<folder>BackupPlatform</folder>
 			<folder>Controller</folder>
+			<folder>BackupPlatform</folder>
 			<folder>Dispatcher</folder>
 			<folder>fields</folder>
 			<folder>Helper</folder>
@@ -59,10 +62,12 @@
 
 			<filename>akeeba.php</filename>
 			<filename>fof.xml</filename>
+			<filename>restore.php</filename>
 			<filename>version.php</filename>
 			<filename>config.xml</filename>
 			<filename>access.xml</filename>
 			<filename>CHANGELOG.php</filename>
+			<filename>Container.php</filename>
 		</files>
 
 		<!-- Back-end translation files -->
