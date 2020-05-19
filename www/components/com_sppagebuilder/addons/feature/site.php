@@ -111,7 +111,7 @@ class SppagebuilderAddonFeature extends SppagebuilderAddons {
 			}
 
 			$feature_title .= '<'.$heading_selector.' class="sppb-addon-title sppb-feature-box-title'. $heading_class .'">';
-			if( ($title_url && $url_appear == 'title') || ($title_url && $url_appear == 'both' ) ) $feature_title .= '<a href="'. $title_url .'"'.($link_open_new_window ? ' rel="noopener noreferrer" target="_blank"' : '').'>';
+			if( ($title_url && $url_appear == 'title') || ($title_url && $url_appear == 'both' ) ) $feature_title .= '<a class="clickable" href="'. $title_url .'"'.($link_open_new_window ? ' rel="noopener noreferrer" target="_blank"' : '').'>';
 			$feature_title .= $title;
 			if(($title_url && $url_appear == 'title') || ($title_url && $url_appear == 'both' )) $feature_title .= '</a>';
 			$feature_title .= '</'.$heading_selector.'>';
