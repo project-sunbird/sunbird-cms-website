@@ -6,8 +6,8 @@
 		<div class="container">
 			<div class="primary-logo-img pull-left">
 				<a href="/">
-					<img class="hidden-xs hidden-sm" src="<?php echo $primarylogoDesktop ?>" alt="logo"/>
-					<img class="hidden-md hidden-lg" src="<?php echo $primarylogoMobile ?>" alt="logo"/>
+					<img class="hidden-xs hidden-sm" src="<?php echo $primarylogoDesktop ?>" alt="desktop logo"/>
+					<img class="hidden-md hidden-lg" src="<?php echo $primarylogoMobile ?>" alt="mobile logo"/>
 				</a>
 			</div>
 			<?php if ($this->countModules('header')): ?>
