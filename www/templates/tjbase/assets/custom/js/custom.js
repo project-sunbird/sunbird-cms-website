@@ -40,3 +40,43 @@ jQuery(document).ready(function() {
         
   });
 });
+
+// jQuery(document).ready(function() {
+//     jQuery(window).scroll(function() {
+//         var footerTop = jQuery("footer").offset().top - jQuery(window).scrollTop();
+        
+//         //var window_offset = footerTop.offset().top;
+//         if(footerTop) {
+//             jQuery('.bg-image').addClass('image-fix');
+//         }
+//         else {
+//             jQuery('.bg-image').removeClass('image-fix');
+//         }
+//     });
+// });
+
+jQuery(window).on('scroll', function() { 
+    if (jQuery(window).scrollTop() >= jQuery('#section-id-1582615406679').offset().top + jQuery('#section-id-1582615406679').outerHeight() - window.innerHeight) { 
+        jQuery('.bg-image').addClass('image-fix');
+    } 
+    else {
+        jQuery('.bg-image').removeClass('image-fix');
+    }
+}); 
+
+
+function readmoreDiscover() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
